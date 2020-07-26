@@ -8,27 +8,17 @@ library(stringr)
 quantLinhas <- readline(prompt = 'insira o número de linhas do sudoku: ')
 quantLinhas <- as.numeric(quantLinhas)
 
-posicoesNA <- which(is.na(construtoSudoku)) #retorna os índices para os quais a 
+posicoes0 <- which(construtoSudoku == 0) #retorna os índices para os quais a 
                               #condição é verdadeira e salva 
-quantNA <- length(posicoesNA)
+quant0 <- length(posicoesNA)
 
 quantTeste <- 10^81
 
-
 ####Construtor de matriz sudoku####
 
-n <- 1
-construcaoSudoku <- function(){
-  matrizSudoku <- NA
-  
-  for(i in seq(1, quantLinhas)){
-    linhaEntrada <- scan()
-    matrizSudoku <- rbind(matrizSudoku, linhaEntrada)
-  }
-  matrizSudoku <- matrizSudoku[-1,]
-}
+construcaoSudoku <- function(n) t(replicate(n, scan()))
 
-construtoSudoku <- construcaoSudoku() #a função gera o objeto construtoSudoku
+construtoSudoku <- construcaoSudoku(9) #a função gera o objeto construtoSudoku
 
 ####Verificador de núcleos####
 
@@ -56,16 +46,55 @@ indiceNucleo7 <- c(55,56,57,64,65,66,73,74,75)
 indiceNucleo8 <- c(58,59,60,67,68,69,76,77,78)
 indiceNucleo9 <- c(61,62,63,70,71,72,79,80,81)
 
+valorNucleo1 <- NULL
+valorNucleo2 <- NULL
+valorNucleo3 <- NULL
+valorNucleo4 <- NULL
+valorNucleo5 <- NULL
+valorNucleo6 <- NULL
+valorNucleo7 <- NULL
+valorNucleo8 <- NULL
+valorNucleo9 <- NULL
 
-for(i in seq(1, length(construtoSudoku))){
-  if(construtoSudoku[i] == 0){ #as posições em brancos são representadas por 0
-    construtoSudoku[i] <- construtoSudoku[i] + 1
-  }
+
+valorNucleo1
+valorNucleo2
+valorNucleo3
+valorNucleo4
+valorNucleo5
+valorNucleo6
+valorNucleo7
+valorNucleo8
+valorNucleo9
+
+
+for(i in indiceNucleo1){
+  valorNucleo1 <- c(valorNucleo1, construtoSudoku[i])
+}
+for(i in indiceNucleo2){
+  valorNucleo2 <- c(valorNucleo2, construtoSudoku[i])
+}
+for(i in indiceNucleo3){
+  valorNucleo3 <- c(valorNucleo3, construtoSudoku[i])
+}
+for(i in indiceNucleo4){
+  valorNucleo4 <- c(valorNucleo4, construtoSudoku[i])
+}
+for(i in indiceNucleo5){
+  valorNucleo5 <- c(valorNucleo5, construtoSudoku[i])
+}
+for(i in indiceNucleo6){
+  valorNucleo6 <- c(valorNucleo6, construtoSudoku[i])
+}
+for(i in indiceNucleo7){
+  valorNucleo7 <- c(valorNucleo7, construtoSudoku[i])
+}
+for(i in indiceNucleo8){
+  valorNucleo8 <- c(valorNucleo8, construtoSudoku[i])
+}
+for(i in indiceNucleo9){
+  valorNucleo9 <- c(valorNucleo9, construtoSudoku[i])
 }
 
 
-  
-
-  
-  
   
