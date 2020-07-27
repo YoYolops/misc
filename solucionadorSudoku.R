@@ -2,7 +2,7 @@
 library(stringr)
 
 
-
+backup <- construtoSudoku
 ####Sudoku Geral####
 
 quantLinhas <- readline(prompt = 'insira o número de linhas do sudoku: ')
@@ -97,4 +97,26 @@ for(i in indiceNucleo9){
 }
 
 
+funcaoCompletora <- function(){
+  c <- 1 #contador que passeia pela stringTeste
+  n <- 1 #contador para gerar o teste inicial com 1
+  casoTeste <- 0
+  quantTeste <- 10^quant0
+  
+  while(n <= quant0){ #loop para saber a quantidade de algarismos usado
+    casoTeste <- casoTeste + 10^(n - 1)
+    stringCasoTeste <- c(####################)
+    n <- n + 1
+  }
+  
+  stringCasoTeste <- as.character(casoTeste)
+  for(i in posicoes0){ #loop que adiciona o primeiro teste
+    construtoSudoku[i] <- #############
+    c <- c + 1
+  }
+  return(construtoSudoku)
+}
+
+
+#a função acima deve invocar o fiscal
   
