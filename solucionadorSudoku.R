@@ -4,13 +4,14 @@ library(stringr)
 
 backup <- construtoSudoku
 ####Sudoku Geral####
+jaRodou <- FALSE
 
 quantLinhas <- readline(prompt = 'insira o número de linhas do sudoku: ')
 quantLinhas <- as.numeric(quantLinhas)
 
 posicoes0 <- which(construtoSudoku == 0) #retorna os índices para os quais a 
                               #condição é verdadeira e salva 
-quant0 <- length(posicoesNA)
+quant0 <- length(posicoes0)
 
 quantTeste <- 10^81
 
@@ -102,21 +103,57 @@ funcaoCompletora <- function(){
   n <- 1 #contador para gerar o teste inicial com 1
   casoTeste <- 0
   quantTeste <- 10^quant0
+  stringCasoTeste <- NULL
   
-  while(n <= quant0){ #loop para saber a quantidade de algarismos usado
-    casoTeste <- casoTeste + 10^(n - 1)
-    stringCasoTeste <- c(####################)
-    n <- n + 1
+  if(jaRodou == FALSE){
+    
+    while(n <= quant0){ #loop para saber a quantidade de algarismos usado
+      casoTeste <- casoTeste + 10^(n - 1) #numérico do teste
+      stringCasoTeste <- append(stringCasoTeste, 1)
+      n <- n + 1
+    }
+  } else{
+    
   }
   
-  stringCasoTeste <- as.character(casoTeste)
   for(i in posicoes0){ #loop que adiciona o primeiro teste
-    construtoSudoku[i] <- #############
+    construtoSudoku[i] <- stringCasoTeste[c]
     c <- c + 1
   }
+  jaRodou <- TRUE
   return(construtoSudoku)
 }
 
+a <- 111
+a <- list(a)
+a[1,1]
+
+a <- c(5,1,5,4,8,1)
+a[5]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #a função acima deve invocar o fiscal
-  
+
+#https://pt.stackoverflow.com/questions/463039/problemas-com-na-em-r
