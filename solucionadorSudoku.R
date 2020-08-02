@@ -37,107 +37,93 @@ construtoSudoku <- construcaoSudoku(9) #a função gera o objeto construtoSudoku
 # 64 65 66    67 68 69    70 71 72
 # 73 74 75    76 77 78    79 80 81
 
-indiceNucleo1 <- c(1,2,3,10,11,12,19,20,21)
-indiceNucleo2 <- c(4,5,6,13,14,15,22,23,24)
-indiceNucleo3 <- c(7,8,9,16,17,18,25,26,27)
-indiceNucleo4 <- c(28,29,30,37,38,39,46,47,48)
-indiceNucleo5 <- c(31,32,33,40,41,42,49,50,51)
-indiceNucleo6 <- c(34,35,36,43,44,45,52,53,54)
-indiceNucleo7 <- c(55,56,57,64,65,66,73,74,75)
-indiceNucleo8 <- c(58,59,60,67,68,69,76,77,78)
-indiceNucleo9 <- c(61,62,63,70,71,72,79,80,81)
+iNuc <- list(
+  indiceNucleo1 <- c(1,2,3,10,11,12,19,20,21),
+  indiceNucleo2 <- c(4,5,6,13,14,15,22,23,24),
+  indiceNucleo3 <- c(7,8,9,16,17,18,25,26,27),
+  indiceNucleo4 <- c(28,29,30,37,38,39,46,47,48),
+  indiceNucleo5 <- c(31,32,33,40,41,42,49,50,51),
+  indiceNucleo6 <- c(34,35,36,43,44,45,52,53,54),
+  indiceNucleo7 <- c(55,56,57,64,65,66,73,74,75),
+  indiceNucleo8 <- c(58,59,60,67,68,69,76,77,78),
+  indiceNucleo9 <- c(61,62,63,70,71,72,79,80,81)
+)
 
-valorNucleo1 <- NULL
-valorNucleo2 <- NULL
-valorNucleo3 <- NULL
-valorNucleo4 <- NULL
-valorNucleo5 <- NULL
-valorNucleo6 <- NULL
-valorNucleo7 <- NULL
-valorNucleo8 <- NULL
-valorNucleo9 <- NULL
-
-
-valorNucleo1
-valorNucleo2
-valorNucleo3
-valorNucleo4
-valorNucleo5
-valorNucleo6
-valorNucleo7
-valorNucleo8
-valorNucleo9
+iLin <- list(
+  indiceLinha1 <- c(1:9),
+  indiceLinha2 <- c(10:18),
+  indiceLinha3 <- c(19:27),
+  indiceLinha4 <- c(28:36),
+  indiceLinha5 <- c(37:45),
+  indiceLinha6 <- c(46:54),
+  indiceLinha7 <- c(55:63),
+  indiceLinha8 <- c(64:72),
+  indiceLinha9 <- c(73:81)
+)
 
 
-for(i in indiceNucleo1){
-  valorNucleo1 <- c(valorNucleo1, construtoSudoku[i])
+iCol <- list(
+  indiceColuna1,
+  indiceColuna2,
+  indiceColuna3,
+  indiceColuna4,
+  indiceColuna5,
+  indiceColuna6,
+  indiceColuna7,
+  indiceColuna8,
+  indiceColuna9
+)
+indiceColuna1 <- c(1,10,19,28,37,46,55,64,73)
+indiceColuna2 <- c(2,11,20,29,38,47,56,65,74)
+indiceColuna3 <- c(3,12,21,30,39,48,57,66,75)
+indiceColuna4 <- c(4,13,22,31,40,49,58,67,76)
+indiceColuna5 <- NULL
+indiceColuna6 <- NULL
+indiceColuna7 <- NULL
+indiceColuna8 <- NULL
+indiceColuna9 <- NULL
+
+
+
+
+for(i in indiceColuna4){
+  indiceColuna5 <- append(indiceColuna5, i+1)
 }
-for(i in indiceNucleo2){
-  valorNucleo2 <- c(valorNucleo2, construtoSudoku[i])
+for(i in indiceColuna5){
+  indiceColuna6 <- append(indiceColuna6, i+1)
 }
-for(i in indiceNucleo3){
-  valorNucleo3 <- c(valorNucleo3, construtoSudoku[i])
+for(i in indiceColuna6){
+  indiceColuna7 <- append(indiceColuna7, i+1)
 }
-for(i in indiceNucleo4){
-  valorNucleo4 <- c(valorNucleo4, construtoSudoku[i])
+for(i in indiceColuna7){
+  indiceColuna8 <- append(indiceColuna8, i+1)
 }
-for(i in indiceNucleo5){
-  valorNucleo5 <- c(valorNucleo5, construtoSudoku[i])
-}
-for(i in indiceNucleo6){
-  valorNucleo6 <- c(valorNucleo6, construtoSudoku[i])
-}
-for(i in indiceNucleo7){
-  valorNucleo7 <- c(valorNucleo7, construtoSudoku[i])
-}
-for(i in indiceNucleo8){
-  valorNucleo8 <- c(valorNucleo8, construtoSudoku[i])
-}
-for(i in indiceNucleo9){
-  valorNucleo9 <- c(valorNucleo9, construtoSudoku[i])
+for(i in indiceColuna8){
+  indiceColuna9 <- append(indiceColuna9, i+1)
 }
 
 
 
+cg <- 1
 
-
-
-
-
-jaRodou <- FALSE
 funcaoCompletora <- function(){
-  c <- 1 #contador que passeia pela stringTeste
-  n <- 1 #contador para gerar o teste inicial com 1
-  casoTeste <- 0
-  quantTeste <- 10^quant0
-  
-  for(i in posicoes0){ #loop que adiciona o primeiro teste
-    construtoSudoku[i] <- algarismoCasoTeste[c]
-    c <- c + 1
-  }
-  jaRodou <- TRUE
-  return(construtoSudoku)
+ posicoes0[cg] <- 1
+ return(construtoSudoku)
 }
 
 
+funcaoFiscal <- function(){
+  
+}
 
-
-
-
-
-
-
-
-rm(dale)
+#ESTUDAR COMO PESQUISAR EM LISTAS
+posicoes0[6]
 
 
 
 #a função acima deve invocar o fiscal
 
 #https://pt.stackoverflow.com/questions/463039/problemas-com-na-em-r
-
-
-
 
 
 
