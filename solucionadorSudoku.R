@@ -13,7 +13,6 @@ posicoes0 <- which(construtoSudoku == 0) #retorna os índices para os quais a
                               #condição é verdadeira e salva 
 quant0 <- length(posicoes0)
 
-quantTeste <- 10^81
 
 ####Construtor de matriz sudoku####
 
@@ -36,6 +35,7 @@ construtoSudoku <- construcaoSudoku(9) #a função gera o objeto construtoSudoku
 # 55 56 57    58 59 60    61 62 63
 # 64 65 66    67 68 69    70 71 72
 # 73 74 75    76 77 78    79 80 81
+
 
 iNuc <- list(
   indiceNucleo1 <- c(1,2,3,10,11,12,19,20,21),
@@ -119,6 +119,9 @@ funcaoFiscal <- function(){
 #ESTUDAR COMO PESQUISAR EM LISTAS
 posicoes0[6]
 
+b <- 
+a <- strsplit(as.character(b),"")
+a
 
 
 #a função acima deve invocar o fiscal
