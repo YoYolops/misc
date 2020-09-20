@@ -67,4 +67,38 @@ def DecHex(decimal):
 
     print(saida)
 
-DecHex(int(input()))
+conversores = {
+
+    'decimal':{
+        'binario': DecBin,
+        'octal': DecOct,
+        'hexadecimal': DecHex
+    }
+
+}
+
+
+while True:
+    print(
+        """ Este é um conversor de bases.
+
+        Instruções:
+        Digite no terminal a base do número que será convertido,
+        por escrito, seguido da base do número para o qual se
+        quer converter, também por escrito.
+        
+        Exemplo:
+        Para converter um numero de decimal para binário digite:
+        > $ decimal binario"""
+    ) 
+    partida, chegada = input().split()
+
+    if partida not in conversores or chegada not in conversores[partida]:
+        print('Desculpe, não entendemos o que você quer')
+    else:
+        conversores[partida][chegada](int(input('Insira o número a ser transformado: ')))
+
+
+
+    
+
