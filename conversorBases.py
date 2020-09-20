@@ -207,7 +207,7 @@ while True:
 
 
     if partida != 'decimal' and chegada == 'decimal':
-        conversores[partida](int(input('Insira o número a ser transformado: ')))
+        conversores[partida](input('Insira o número a ser transformado: '))
 
     elif partida != 'decimal' and chegada != 'decimal':
         a = conversores[partida](input('Insira o número a ser transformado: '))
