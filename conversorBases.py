@@ -25,47 +25,14 @@ def DecBin(decimal):
 
     print(saida)
 
-# Conversor de Decimal para Octal:
+# Conversor de Decimal para Octal: (usa conversão nativa do python)
 def DecOct(decimal):
-    resultado = []
+    print('O resultado é: %o'%decimal)
 
-    while decimal > 7:
-        add = decimal % 8
-        resultado.append(add)
-        decimal = int(decimal/8)
-
-    resultado.append(decimal)
-    saida = inversor(resultado)
-
-    print(saida)
-
+# Conversor de Decimal para Octal: (usa conversão nativa do python)
 def DecHex(decimal):
-    resultado = []
+    print('O resultado é: %x'%decimal)
 
-    while decimal > 15:
-        add = decimal % 16
-        resultado.append(add)
-        decimal = int(decimal/16)
-
-    resultado.append(decimal)
-    saida = inversor(resultado)
-
-    for i in range(len(saida)):
-        if saida[i] > 9:
-            if saida[i] == 10:
-                saida[i] = 'A'
-            elif saida[i] == 11:
-                saida[i] = 'B'
-            elif saida[i] == 12:
-                saida[i] = 'C'
-            elif saida[i] == 13:
-                saida[i] = 'D'
-            elif saida[i] == 14:
-                saida[i] = 'E'
-            elif saida[i] == 15:
-                saida[i] = 'F'
-
-    print(saida)
 
 conversores = {
 
@@ -77,20 +44,21 @@ conversores = {
 
 }
 
+print(
+    """ Este é um conversor de bases.
+
+    Instruções:
+    Digite no terminal a base do número que será convertido,
+    por escrito, seguido da base do número para o qual se
+    quer converter, também por escrito.
+    
+    Exemplo:
+    Para converter um numero de decimal para binário digite:
+    > $ decimal binario"""
+)
 
 while True:
-    print(
-        """ Este é um conversor de bases.
-
-        Instruções:
-        Digite no terminal a base do número que será convertido,
-        por escrito, seguido da base do número para o qual se
-        quer converter, também por escrito.
-        
-        Exemplo:
-        Para converter um numero de decimal para binário digite:
-        > $ decimal binario"""
-    ) 
+    
     partida, chegada = input().split()
 
     if partida not in conversores or chegada not in conversores[partida]:
