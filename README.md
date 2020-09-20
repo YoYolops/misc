@@ -1,2 +1,2 @@
-# misc
-Aqui é uma pasta de miscelânia, onde você encontra vários pequenos projetos em diversas linguagens
+# miscelânia
+Esse repositório é um recanto de pequenos projetos, aberrações da engenharia de software e milagres da lógica computacional.
