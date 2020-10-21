@@ -1,5 +1,4 @@
-# Este é um protótipo com finalidade de estudar o funcionamento
-# de um chatbot e verificar a eficáia de soluções e técnicas
+# Este é um protótipo com finalidade de estudar a viabilidade de chatbots por fluxo de JSONs
 
 def mostraOpc(val):
     escolha = 'opc' + val
