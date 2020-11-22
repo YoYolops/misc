@@ -1,32 +1,18 @@
-def gerador_primos(n):
-    li = 2
-    numeros_primos = list()
 
-    while li <= n:
-        if primo(li):
-            numeros_primos.append(li)
+def simbola(lista, tip):
+    base = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
-        li += 1
+    if tip == 'cod':
+        for i in range(len(lista)):
+            if lista[i] > 9:
+                lista[i] = base[ lista[i]-10 ]
 
-    return numeros_primos
+    elif tip == 'decod':
+        for i in range(len(lista)):
+            if lista[i] in base:
+                lista[i] = base.index(lista[i]) + 10
 
+    print(lista)
+    return lista
 
-def primo(m):
-    i = 1
-    cont = 0
-
-    while i <= m:
-        if m % i == 0:
-            cont += 1
-
-        i += 1
-        
-    if cont > 2:
-        return False
-    else:
-        return True
-
-
-num = int(input('Digite um número inteiro: '))
-
-print(f'\033[32mOs números primos entre "2" e "{num}" são:\n{gerador_primos(num)}')
+simbola(['A', 'A'], 'decod')
