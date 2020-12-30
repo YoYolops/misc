@@ -1,85 +1,14 @@
-labels = [
-    "Administração",
-    "Agronomia",
-    "Arquitetura e Urbanismo",
-    "Arte e Mídia",
-    "Ciência da Computação",
-    "Ciências Biológicas",
-    "Ciências Contábeis",
-    "Ciências Econômicas",
-    "Ciências Sociais",
-    "Comunicação Social",
-    "Design",
-    "Direito",
-    "Enfermagem",
-    "Engenharia Agrícola",
-    "Engenharia Ambiental",
-    "Engenharia Civil",
-    "Engenharia de Alimentos",
-    "Engenharia de Biossistemas",
-    "Engenharia de Biotecnologia e Bioprocessos",
-    "Engenharia de Materiais",
-    "Engenharia de Minas",
-    "Engenharia de Petróleo",
-    "Engenharia de Produção",
-    "Engenharia Elétrica",
-    "Engenharia Florestal",
-    "Engenharia Mecânica",
-    "Engenharia Química",
-    "Estatística",
-    "Farmácia",
-    "Filosofia",
-    "Física",
-    "Geografia",
-    "Gestão Pública",
-    "História",
-    "Letras",
-    "Matemática",
-    "Medicina",
-    "Medicina Veterinária",
-    "Meteorologia",
-    "Nutrição",
-    "Odontologia",
-    "Pedagogia",
-    "Psicologia",
-    "Química"
-]
+import requests
 
-data = [
-    38,5, 5, 34, 114, 92, 2, 3, 5, 1,
-    53, 138, 73, 8, 25, 128, 24, 1, 2, 2,
-    2, 37, 7, 112, 8, 12, 7, 25, 82, 9,
-    10, 99, 1, 66, 25, 71, 63, 4, 4, 90,
-    4, 6, 24, 46
-]
+url = 'https://esb.tjpb.jus.br/cp-backend/sistemas/3/processos?nomeParte=Claudenir%20Lopes%20da%20Silva%20Barbosa&tipoPessoa=F&offset=0&quantidade=10'
 
-def ordena(lista, lista2):
-    trocou = True
+headers = {
+    'host': 'esb.tjpb.jus.br',
+    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0',
+    'connection': 'keep-alive',
+}
 
-    while trocou:
-        trocou = False
+resposta = requests.get(url, headers=headers)
 
-        for i in range(len(lista)-1):
-            if lista[i] > lista[i+1]:
-                lista[i], lista[i+1] = lista[i+1], lista[i]
-                lista2[i], lista2[i+1] = lista2[i+1], lista2[i]
-                trocou = True
-
-    return lista, lista2
-
-l1, l2 = ordena(data, labels)
-
-invL1 = []
-invL2 = []
-for i in range(len(l1)-1, -1, -1):
-    invL1.append(l1[i])
-    invL2.append(l2[i])
-
-percentual = []
-
-for i in invL1:
-    perc = (100/1567) * i
-    percentual.append(round(perc, 2))
-
-print(percentual)
-
+for i in resposta.json():
+    print(i)
