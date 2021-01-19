@@ -1,23 +1,39 @@
-def gNota(lista):
-    peso = 5
-    soma = 0
-    div = 0
+entrada = ''
 
-    for i in lista:
-        soma += i*peso
-        div += i 
+while entrada != EOF:
+  try:
+    #Recebo a entrada, e já a converto para minúsculo
+    entradaParcial = input()
+    entradaParcial = entradaParcial.lower()
 
-        peso -= 1
+    entrada += entradaParcial
 
-    saida = soma/div
+    print(f'entrada total: {entrada}')
+  except EOFError:
+    break
 
-    print(f'a nota é: {saida}')
 
-while True:
-    val = input().split()
+#Tento remover todos os caracteres que não sejam letras. Aí está o PRINCIPAL erro do meu código, pois desta forma, sei que não consigo remover todos os caracteres desejados da string
+S = entrada
+for x in '0123456789+-*/[]{}().,?":~´`ªº!@#$%¨&_':
+    S = S.replace(x, ' ')
 
-    nval = []
-    for i in val:
-        nval.append(int(i))
+#Armazeno cada "palavra" na lista, separando pelo o espaço vazio (' '), e ordeno a lista
+L = S.split(' ')
+L = sorted(set(L))
 
-    gNota(nval)
+#Removo índices que estão vazios ('')
+i = 0
+while i < len(L):
+    if L[i] == '':
+        L.pop(i)
+    i += 1
+
+#Exibo o conteúdo de cada índice da lista, um por linha
+j = 0
+print('saida:')
+while j < len(L):
+    print(L[j])
+    j += 1
+print('fim de saida')
+print()
