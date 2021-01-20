@@ -21,11 +21,9 @@ def setScenario(quantY, quantX, posCelula):
                 caractere = '-'
 
             linha += caractere
-
             casa[0] += 1
 
         print(linha)
-
         casa[0], casa[1] = 1, casa[1] + 1
 
     retorno = {
