@@ -11,12 +11,17 @@
 
 
 def killer(dados):
+    x = dados['dimx']
+    y = dados['dimy']
 
     celulasEmProvacao = list(dados['posCelula'])
     cacheCelulasVivas = list(dados['posCelula'])
 
-    def isValid(coords):
-        if coords[0] < 1 or coords[1] < 1:
+    def isValid(coords, x, y):
+        #Se as duas ultimas condições abaixo forem retiradas, o programa vai continuar calculando o ciclo de vida 
+        # das celulas que passam da borda do mapa, mesmo que elas não estejam sendo mostradas, o que pode gerar problemas de 
+        # performance, Caso as condições estejam ativas, o programa considera as celulas que cruzam a borda como celulas mortas
+        if coords[0] < 1 or coords[1] < 1 or coords[0] > x or coords[1] > y: 
             return False
         return True
 
@@ -38,9 +43,9 @@ def killer(dados):
         cont = 0
 
         for i in vizinhos:
-            if isValid(i) and i not in _cacheCelulasVivas:
+            if isValid(i, x, y) and i not in _cacheCelulasVivas:
                 casasProsperas.append(i)
-            elif isValid(i) and i in _cacheCelulasVivas:
+            elif isValid(i, x, y) and i in _cacheCelulasVivas:
                 cont += 1
 
         retorno = {
@@ -76,7 +81,6 @@ def killer(dados):
 
 
 #pra cada celula, verificar as casas ao redor
-#retirar posiçoes invalidas
+#retirar posiçoes invalidas (coordenadas menores que 1)
 #a quantidade de posicoes validas é o num de vizinhos
 #decidir se a celula vive ou morre
-#se vive, permanece em posCelula, se morre é retirada

@@ -3,18 +3,6 @@ from liver import liver
 from tableConstructor import setScenario
 from time import sleep
 
-def runner(larguraX, alturaY, celulasVivas):
-
-    x = larguraX
-    y = alturaY
-
-    while True:
-        out = setScenario(y, x, celulasVivas)
-        out = killer(out)
-        celulasVivas = liver(out)
-        print("\x1b[2J\x1b[1;1H", end="")
-        #sleep(0.07)
-
 oscilator = [
     [2,2],
     [1,2],
@@ -50,4 +38,13 @@ gliderGun = [
     [35,3],[35,4],[36,3],[36,4]
 ]
 
-runner(60, 24, gliderGun)
+x = 60 #Quantidades de colunas do cenário
+y = 24 #quantidade de linhas do cenário
+celulasVivas = gliderGun #posições da primeira geração de células vivas
+
+while True:
+    out = setScenario(y, x, celulasVivas)
+    out = killer(out)
+    celulasVivas = liver(out)
+    print("\x1b[2J\x1b[1;1H", end="")
+    #sleep(0.07)

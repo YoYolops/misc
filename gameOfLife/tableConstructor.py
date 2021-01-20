@@ -28,5 +28,7 @@ def setScenario(quantY, quantX, posCelula):
 
     retorno = {
         'posCelula': posCelula,
+        'dimx': quantX,
+        'dimy': quantY
     }
     return retorno
