@@ -7,6 +7,8 @@
 
 def setScenario(quantY, quantX, posCelula):
     
+    COLOR = "\033[1;36m"
+    RESET = "\033[0;0m"
     casa = [1, 1] #[x,y]
     #o primeiro loop, vai construir a primeira linha, o seguno a segunda e por ai vai
 
@@ -16,7 +18,7 @@ def setScenario(quantY, quantX, posCelula):
         while casa[0] <= quantX:
 
             if casa in posCelula:
-                caractere = 'O'
+                caractere = COLOR + 'O' + RESET
             else:
                 caractere = '-'
 

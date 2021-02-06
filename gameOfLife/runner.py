@@ -38,8 +38,24 @@ gliderGun = [
     [35,3],[35,4],[36,3],[36,4]
 ]
 
-x = 60 #Quantidades de colunas do cenário
-y = 24 #quantidade de linhas do cenário
+dieHard = [
+    [25,9],[26,9],[26,10],
+    [30,10],[31,10],[32,10],[31,8]
+]
+
+acorn = [
+    [55,15],[56,15],[56,13],
+    [58,14],[59,15],[60,15],[61,15]
+]
+
+infinityGrouth1 = [
+    [58,23],[59,23],[60,23],[62,23],
+    [58,24],[61,25],[62,25],[59,26],[60,26],[62,26],
+    [58,27],[60,27],[62,27]
+]
+
+x = 120 #Quantidades de colunas do cenário
+y = 35 #quantidade de linhas do cenário
 celulasVivas = gliderGun #posições da primeira geração de células vivas
 
 while True:
@@ -47,4 +63,4 @@ while True:
     out = killer(out)
     celulasVivas = liver(out)
     print("\x1b[2J\x1b[1;1H", end="")
-    #sleep(0.07)
+    sleep(0.06)
