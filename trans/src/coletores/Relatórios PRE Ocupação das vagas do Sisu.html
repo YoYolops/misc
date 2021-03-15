@@ -1,0 +1,908 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+<title>Relatórios PRE: Página de erro do JasperReports Server</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<!--
+        <meta http-equiv="X-UA-Compatible" content="IE=8"/>
+        -->
+<link href="/RelatoriosPRE/_themes/9EE4698E/images/favicon.ico" rel="shortcut icon"/>
+<!--
+            <link rel="shortcut icon" href="favicon.ico" />
+        -->
+<meta content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width" name="viewport"/>
+<meta content="yes" name="apple-mobile-web-app-capable">
+<link href="/RelatoriosPRE/runtime/FD1FA3E1/themes/reset.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/RelatoriosPRE/_themes/9EE4698E/themeMinimal.css" media="screen,print" rel="stylesheet" type="text/css">
+<!--[if IE 7.0]>
+    <link rel="stylesheet" href="/RelatoriosPRE/_themes/9EE4698E/overrides_ie7.css" type="text/css" media="screen"/>
+    <![endif]-->
+<!--[if IE 8.0]>
+    <link rel="stylesheet" href="/RelatoriosPRE/_themes/9EE4698E/overrides_ie8.css" type="text/css" media="screen"/>
+    <![endif]-->
+<!--[if IE]>
+    <link rel="stylesheet" href="/RelatoriosPRE/_themes/9EE4698E/overrides_ie.css" type="text/css" media="screen"/>
+    <![endif]-->
+<link href="/RelatoriosPRE/_themes/9EE4698E/jasper-ui/jasper-ui.css" media="screen,print" rel="stylesheet" type="text/css"/>
+<link href="/RelatoriosPRE/_themes/9EE4698E/jquery-ui/jquery-ui.css" media="screen,print" rel="stylesheet" type="text/css"/>
+<link href="/RelatoriosPRE/_themes/9EE4698E/panel.css" media="screen,print" rel="stylesheet" type="text/css"/>
+<link href="/RelatoriosPRE/_themes/9EE4698E/menu.css" media="screen,print" rel="stylesheet" type="text/css"/>
+<link href="/RelatoriosPRE/_themes/9EE4698E/simpleColorPicker.css" media="screen,print" rel="stylesheet" type="text/css"/>
+<link href="/RelatoriosPRE/_themes/9EE4698E/webPageView.css" media="screen,print" rel="stylesheet" type="text/css"/>
+<link href="/RelatoriosPRE/_themes/9EE4698E/notifications.css" media="screen,print" rel="stylesheet" type="text/css"/>
+<link href="/RelatoriosPRE/_themes/9EE4698E/attributes.css" media="screen,print" rel="stylesheet" type="text/css"/>
+<link href="/RelatoriosPRE/_themes/9EE4698E/importExport.css" media="screen,print" rel="stylesheet" type="text/css"/>
+<link href="/RelatoriosPRE/_themes/9EE4698E/manageTenants.css" media="screen,print" rel="stylesheet" type="text/css"/>
+<link href="/RelatoriosPRE/_themes/9EE4698E/pagination.css" media="screen,print" rel="stylesheet" type="text/css"/>
+<link href="/RelatoriosPRE/_themes/9EE4698E/overrides_custom.css" media="screen" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+    var JRS = {};
+
+    var __jrsConfigs__ = {
+
+        i18n: {},
+        localContext: {},
+        isIPad: "",
+        contextPath: "/RelatoriosPRE",
+        runtimeContextPath: "/RelatoriosPRE/runtime/FD1FA3E1",
+        organizationsFolderUri: "",
+        publicFolderUri: "/public",
+        tempFolderUri: "/temp",
+        enableAccessibility: "true",
+        organizationId: "",
+        userId: "anonymousUser",
+        commonReportGeneratorsMetadata: [],
+        templatesFolderUri: '',
+        defaultTemplateUri: '',
+        advNotSelected: "ADH_162_NULL_SAVE_REPORT_SOURCE",
+        templateNotSelected: "ADH_162_NULL_SELECT_TEMPLATE_SOURCE",
+        calendar: {
+
+            userLocale: "pt_BR",
+
+            timepicker: {
+                timeText: 'Hora:',
+                hourText: 'Hora',
+                minuteText: 'Minuto',
+                secondText: 'Segundo',
+                currentText: 'Agora',
+                closeText: 'Fechar',
+                timeFormat: 'HH:mm:ss',
+                dateFormat: 'yy-mm-dd',
+                separator:' '
+            },
+
+            i18n: {
+                bundledCalendarTimeFormat: 'HH:mm:ss',
+                bundledCalendarFormat: 'yy-mm-dd'
+            }
+        },
+
+        webHelpModuleState: {
+            contextMap: {"default":"100","bi_overview":"100","login":"150","legacy_dashboard":"200","ad_hoc":"300","domain":"500","search":"600","analysis":"700","admin":"800","repo":"900","dashboard":"1000","domain2":"1100","domain_metadata":"1101","domain_joins":"1111","domain_filters":"1121","domain_presentation":"1131","domain_security":"1141","domain_locales":"1151"},
+            hostURL: 'http://help.jaspersoft.com/js-help-v7-en/',
+            pagePrefix: 'Default_CSH.htm#'
+        },
+
+        urlContext: "/RelatoriosPRE",
+        defaultSearchText: "",
+        serverIsNotResponding: "O servidor está lento ou não está respondendo. Confirme que deseja continuar."
+    };
+
+    // dirty hack to get path to current theme
+    __jrsConfigs__.currentThemePath = "_themes/9EE4698E/theme.css".split("/").slice(0, -1).join("/");
+
+    __jrsConfigs__.isProVersion = "false" === "true" ? true : false;
+
+    __jrsConfigs__.userLocale = "pt_BR";
+    __jrsConfigs__.userTimezone = "America/Recife";
+
+    __jrsConfigs__.avaliableLocales = ["pt_BR", "de", "es", "fr", "it", "ja", "en", "zh_CN"];
+    __jrsConfigs__.avaliableLocalesFullName = ["pt_BR - português &#040;Brasil&#041;", "de - alemão", "es - espanhol", "fr - francês", "it - italiano", "ja - japonês", "en - inglês", "zh_CN - chinês &#040;China&#041;"];
+
+    __jrsConfigs__.localeSettings = {
+        locale: "pt_BR",
+        decimalSeparator: "" || ".",
+        groupingSeparator: "" || ",",
+        timeFormat: "HH:mm:ss",
+        dateFormat: "yy-mm-dd",
+        timestampSeparator: " "
+    };
+    //Heartbeat
+
+    __jrsConfigs__.heartbeatInitOptions = {
+        baseUrl: "/RelatoriosPRE",
+        showDialog: false,
+        sendClientInfo: false
+    };
+
+    
+        
+        
+            __jrsConfigs__.initAdditionalUIComponents = true;
+        
+    
+
+    
+    
+    
+    
+    
+
+    __jrsConfigs__.flowExecutionKey = "e2s1";
+
+    if (window.localStorage && window.localStorage.previousPageHash){
+        window.location.hash = window.localStorage.previousPageHash;
+        delete window.localStorage.previousPageHash;
+    }
+
+    __jrsConfigs__.xssNonce = 'nonce-97DV-HNGC-FPUL-0XI4-YEO4-4TZS-1S2G-1PLW';
+    __jrsConfigs__.xssHtmlTagWhiteList='';
+    
+</script>
+<script src="/RelatoriosPRE/runtime/FD1FA3E1/optimized-scripts/runtime_dependencies/requirejs/require.js" type="text/javascript"></script>
+<script src="/RelatoriosPRE/runtime/FD1FA3E1/optimized-scripts/require.config.js" type="text/javascript"></script>
+<script type="text/javascript">
+// nonce-97DV-HNGC-FPUL-0XI4-YEO4-4TZS-1S2G-1PLW (jsp XSS nonce)
+
+
+require.config({
+    baseUrl: "/RelatoriosPRE/runtime/FD1FA3E1/optimized-scripts"
+});
+</script>
+<script src="/RelatoriosPRE/runtime/FD1FA3E1/JavaScriptServlet" type="text/javascript"></script>
+<script src="/RelatoriosPRE/runtime/FD1FA3E1/scripts/runtime_dependencies/prototype/dist/prototype.js" type="text/javascript"></script>
+<script type="text/javascript">
+        define("prototype", $);
+    </script>
+<script type="text/javascript">
+            
+                
+                
+                
+                    requirejs(["commons/commons.main"], function(){
+                        requirejs(["system/errorMain"]);
+                    });
+                
+            
+        </script>
+</link></meta></head>
+<body aria-busy="true" aria-label="Jasper Reports Server." class="" id="serverError" js-stdnav="true" role="application">
+<div aria-label="Carregar servidor do Jasper Reports, aguarde." aria-live="assertive" id="ariastatus" role="alert"></div>
+<!-- Internet Explorer Countermeasures.  This element is used to force DOM changes to cause user-agent logic to re-evaluate the DOM. -->
+<div aria-hidden="true" id="IECM" style="display:block; height:0px; background-color:transparent;">   </div>
+<div class="banner" id="banner" style="">
+<div id="systemMessageConsole" style="display:none">
+<p id="systemMessage">Fechar</p>
+</div>
+<div aria-label="TIBCO logo" class="sectionLeft" id="logo" role="image"></div>
+<div class="sectionLeft">
+<div aria-label="Main Menu" class="menuRoot menu horizontal primaryNav" id="mainNavigation" js-navtype="actionmenu" role="menubar" tabindex="2"><!--FIXME ARIA i18n -->
+<ul data-component-type="navigation" id="navigationOptions" js-navtype="actionmenu">
+<li aria-label="Página inicial" class="leaf hidden" data-title="true" id="main_home" js-navtype="actionmenu" role="menuitem">
+<p class="wrap button"><span class="icon"></span></p>
+</li>
+<li class="leaf hidden" id="main_library" js-navtype="actionmenu" role="menuitem">
+<p class="wrap button"><span class="icon"></span>Biblioteca</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sectionRight">
+<div style="float:left;">
+<ul aria-label="User Menu" class="horizontal" id="metaLinks" role="menubar" tabindex="3"><!-- FIXME i18n -->
+</ul>
+</div>
+<div class="searchContainer" style="float:left;">
+<!-- banner search -->
+<span class="control searchLockup" data-component-type="search" id="globalSearch">
+<label class="offLeft" for="searchInput">Busca</label>
+<div class="wrap">
+<input class="stdnavinitialfocus" id="searchInput" tabindex="1" type="text"/>
+</div>
+<b class="right"><a class="button searchClear"></a></b>
+<a class="button search up"></a>
+</span>
+</div>
+</div>
+</div>
+<div id="frame" style="">
+<div class="content">
+<!-- nonce-97DV-HNGC-FPUL-0XI4-YEO4-4TZS-1S2G-1PLW (jsp XSS nonce) -->
+<div class="body oneColumn flow" id="display">
+<a id="maincontent" name="maincontent"></a>
+<div class="column decorated primary">
+<!-- nonce-97DV-HNGC-FPUL-0XI4-YEO4-4TZS-1S2G-1PLW (jsp XSS nonce) -->
+<div class="content">
+<div class="header">
+<div class="title">
+                Erro do servidor
+            </div>
+</div>
+<div class="body" id="errorPageContent">
+<div id="stepDisplay">
+<fieldset class="row" style="margin-top: 10px;">
+<h3>
+                            Mensagem de erro
+                        </h3>
+<div id="errorMessages">
+                            
+                                Ocorreu um erro no servidor. Tente novamente ou entre em contato com os administradores do site. (UID do erro: f9f26967-81e8-444a-813f-5658c9ef1be5)
+                            
+                        </div>
+</fieldset>
+</div><!--/#stepDisplay-->
+</div>
+</div>
+</div>
+</div><!-- /#display -->
+</div>
+</div>
+<div id="frameFooter" style="">
+<p id="about">
+<a href="#">Sobre o TIBCO JasperReports Server</a>
+</p>
+<p id="copyright">Copyright © 2005-2020 TIBCO Software Inc.</p>
+</div>
+<div id="templateElements">
+<div aria-hidden="true" class="menu vertical context hidden" id="menu" role="menu"></div>
+<div class="hidden" id="commonMenu">
+<div class="content">
+<ul id="menuList_template" role="menubar">
+</ul>
+<!-- nonce-97DV-HNGC-FPUL-0XI4-YEO4-4TZS-1S2G-1PLW (jsp XSS nonce) -->
+</div>
+</div>
+<ul aria-hidden="true" class="hidden" role="menubar">
+<li class="leaf" id="menuList_simpleAction" role="menuitem"><p class="wrap button"><span class="icon"></span><!--Item text goes here--></p></li>
+<li class="leaf separator" id="menuList_separator" role="separator"></li>
+<li class="node" id="menuList_flyout" role="menu"><p class="wrap button"><span class="icon"></span><!--Item text goes here--></p></li>
+<li class="leaf" id="menuList_extraInput"><p class="wrap button"><span class="icon"></span><!--Item text goes here--></p></li>
+<li class="leaf" id="menuList_listItem" role="menuitem"><p class="wrap toggle button"><span class="icon"></span><!--Item text goes here--></p></li>
+<li class="node mutton" id="navigation_mutton" role="menuitem" tabindex="-1"><p class="wrap button"><span class="icon"></span></p></li>
+</ul>
+<div id="listTemplateHolder" style="display:none">
+<!-- default template for flat lists-->
+<ul class="list" id="defaultListTemplate" js-navtype="dynamiclist" tabindex="0">
+<!-- default template for items of flat lists -->
+<li class="leaf" id="dynamicListItemTemplate" js-navtype="dynamiclist"><p class="wrap button"></p></li>
+</ul>
+<!-- Template used for filter path in search -->
+<ul class="list control path" id="list_control_path" js-navtype="dynamiclist" tabindex="0">
+<!-- Template for label of the path
+        States (possible class name changes) :
+            * first - if item is first in the list
+            * last - if item is last in the list
+            * selected - if item is selected in the list
+    -->
+<li class="label" id="list_control_path:label" js-navtype="dynamiclist"><p class="wrap button"></p></li>
+<!-- Template for items of the path
+        States (possible class name changes) :
+            * first - if item is first in the list
+            * last - if item is last in the list
+            * selected - if item is selected in the list
+    -->
+<li class="step" id="list_control_path:step" js-navtype="dynamiclist"><p class="wrap button"></p></li>
+</ul>
+<!-- Template used for sorters in search -->
+<!-- TODO FIXME: Keyboard support is temporarily disabled here due to a race condition in the sorter that CAN happen without the accessibility extensions,
+using only the mouse, but happens really easily using the keyboard. -->
+<ul class="list tabSet text control horizontal" id="tabSet_control_horizontal_responsive" js-navtype="none" js-stdnav="false" tabindex="-1">
+<!--
+        Template of resource item in the list
+        States (possible class name changes) :
+            * first - if item is first in the list
+            * last - if item is last in the list
+            * selected - if item is selected in the list
+    -->
+<li class="label" id="tabSet_control_horizontal_responsive:label" js-navtype="dynamiclist"><p class="wrap"></p></li>
+<!-- Template for sort option
+        States (possible class name changes) :
+            * first - if item is first in the list
+            * last - if item is last in the list
+            * selected - if item is selected in the list
+    -->
+<li class="tab" id="tabSet_control_horizontal_responsive:tab" js-navtype="dynamiclist"><p class="wrap button"></p></li>
+</ul>
+<!-- Template used for list of resources in search -->
+<ul class="list collapsible tabular resources fourColumn" id="tabular_fourColumn_resources" js-navtype="dynamiclist" tabindex="0">
+<!--
+        Template of resource item in the list
+        States (possible class name changes) :
+            * first - if item is first in the list
+            * last - if item is last in the list
+            * leaf - default item.
+            * node - if has children resources (e.g. Report Options).
+            * open - if resource has children and they showed
+            * closed - if resource has children and they hidden
+            * selected - if item is selected in the list
+            * scheduled - if resource is scheduled
+    -->
+<li class="resources" id="tabular_fourColumn_resources:leaf" js-navtype="dynamiclist">
+<div class="wrap button draggable">
+<div class="column one">
+<div class="scheduled icon button"></div>
+<div class="separator"></div>
+<div class="disclosure icon button"></div>
+</div>
+<div class="column two">
+<p class="resourceName"><a></a></p>
+<p class="resourceDescription"></p>
+</div>
+<div class="column three resourceType"></div>
+<div class="column four">
+<p class="createdDate"></p>
+<p class="modifiedDate"></p>
+</div>
+</div>
+</li>
+</ul>
+<!-- Template used for list of resources in search -->
+<ul class="list collapsible tabular resources fourColumn sublist" id="tabular_fourColumn_resources_sublist" js-navtype="dynamiclist" tabindex="0">
+<!--
+        Template of resource item in the list
+        States (possible class name changes) :
+            * first - if item is first in the list
+            * last - if item is last in the list
+            * leaf - default item.
+            * node - if has children resources (e.g. Report Options).
+            * open - if resource has children and they showed
+            * closed - if resource has children and they hidden
+            * selected - if item is selected in the list
+            * scheduled - if resource is scheduled
+    -->
+<li class="resources" id="tabular_fourColumn_resources_sublist:leaf" js-navtype="dynamiclist">
+<div class="wrap button draggable">
+<div class="column one">
+<div class="scheduled icon button"> </div>
+<div class="separator"></div>
+<div class="disclosure icon button"> </div>
+</div>
+<div class="column two">
+<p class="resourceName"><a></a></p>
+<p class="resourceDescription"></p>
+</div>
+<div class="column three resourceType"></div>
+<div class="column four">
+<p class="createdDate"></p>
+<p class="modifiedDate"></p>
+</div>
+</div>
+</li>
+</ul>
+<!-- Template used for list of users in user management -->
+<ol class="list tabular collapsible threeColumn" id="tabular_threeColumn" js-navtype="dynamiclist" tabindex="0">
+<!--
+        Template of resource item in the list
+        States (possible class name changes) :
+            * first - if item is first in the list
+            * last - if item is last in the list
+            * selected - if item is selected in the list
+    -->
+<li class="leaf" id="tabular_threeColumn:leaf" js-navtype="dynamiclist">
+<div class="wrap button">
+<div class="column one">
+<p class="ID"><a></a></p>
+</div>
+<div class="column two">
+<p class="name"></p>
+</div>
+<div class="column three">
+<p class="organization"></p>
+</div>
+</div>
+</li>
+</ol>
+<!-- Template used for list of users in user management -->
+<ol class="list tabular collapsible twoColumn" id="tabular_twoColumn" js-navtype="dynamiclist" tabindex="0">
+<!--
+        Template of resource item in the list
+        States (possible class name changes) :
+            * first - if item is first in the list
+            * last - if item is last in the list
+            * selected - if item is selected in the list
+    -->
+<li class="leaf" id="tabular_twoColumn:leaf" js-navtype="dynamiclist">
+<div class="wrap button">
+<div class="column one">
+<p class="ID"><a></a></p>
+</div>
+<div class="column two">
+<p class="name"></p>
+</div>
+</div>
+</li>
+</ol>
+<!-- Template used for list of dependet reports in ad hoc designer -->
+<ol class="list tabular oneColumn" id="tabular_oneColumn" js-navtype="dynamiclist" tabindex="0">
+<!--
+        Template of resource item in the list
+        States (possible class name changes) :
+            * first - if item is first in the list
+            * last - if item is last in the list
+            * selected - if item is selected in the list
+    -->
+<li class="leaf" id="tabular_oneColumn:leaf" js-navtype="dynamiclist">
+<div class="wrap">
+<div class="column one">
+<p class="uri"></p>
+</div>
+</div>
+</li>
+</ol>
+<!-- Template used for list of role in role management -->
+<ol class="list tabular twoColumn" id="tabular_twoColumn:roles" js-navtype="dynamiclist" tabindex="0">
+<!--
+        Template of resource item in the list
+        States (possible class name changes) :
+            * first - if item is first in the list
+            * last - if item is last in the list
+            * selected - if item is selected in the list
+    -->
+<li class="leaf" id="tabular_twoColumn:roles:leaf" js-navtype="dynamiclist">
+<div class="wrap button">
+<div class="column one">
+<p class="ID"></p>
+</div>
+<div class="column two">
+<p class="organization"></p>
+</div>
+</div>
+</li>
+</ol>
+<!-- Template used for list of role in role management -->
+<ol class="list tabular collapsible oneColumn" id="tabular_oneColumn:roles" js-navtype="dynamiclist" tabindex="0">
+<!--
+        Template of resource item in the list
+        States (possible class name changes) :
+            * first - if item is first in the list
+            * last - if item is last in the list
+            * selected - if item is selected in the list
+    -->
+<li class="leaf" id="tabular_oneColumn:roles:leaf" js-navtype="dynamiclist">
+<div class="wrap button">
+<div class="column one">
+<p class="ID"></p>
+</div>
+</div>
+</li>
+</ol>
+<!-- Template used for list of resource children list in search (e.g Report Options)-->
+<ol class="list tabular resources twoColumn" id="tabular_twoColumn_resources" js-navtype="dynamiclist" tabindex="0">
+<!--
+        Template of resource child item in the list
+        States (possible class name changes) :
+            * selected - if item is selected in the list
+            * scheduled - if resource is scheduled
+    -->
+<li class="resources leaf" id="tabular_twoColumn_resources:leaf" js-navtype="dynamiclist">
+<div class="wrap button">
+<div class="column one">
+<div class="scheduled icon button"></div>
+</div>
+<div class="column two">
+<p class="resourceName"><a></a></p>
+<p class="resourceDescription"></p>
+</div>
+</div>
+</li>
+</ol>
+<!-- Template used for list of permissions for resource-->
+<ul class="list setLeft tabular twoColumn" id="tabular_twoColumn_setLeft" js-navtype="dynamiclist" tabindex="0">
+<!--
+    Template of permission item for user or role
+    -->
+<li class="leaf" id="tabular_twoColumn_setLeft:leaf" js-navtype="dynamiclist">
+<div class="wrap"><b class="icon"></b>
+<p class="column one"><a class="launcher"></a></p>
+<p class="column two">
+<select>
+</select>
+</p>
+</div>
+</li>
+<li class="leaf loading" id="tabular_twoColumn_setLeft:loading" js-navtype="dynamiclist">
+<div class="wrap"><b class="icon"></b>
+<p class="column one"><a class="launcher"></a></p>
+<p class="column two">
+</p>
+</div>
+</li>
+</ul>
+<ul class="list filters" id="list_responsive_filters" js-navtype="dynamiclist" tabindex="0">
+<li class="leaf" id="list_responsive_filters:leaf" js-navtype="dynamiclist">
+<p class="wrap button"><b class="icon"></b></p>
+</li>
+<li class="node closed" id="list_responsive_filters:node" js-navtype="dynamiclist">
+<p class="wrap button separator"><b class="icon"></b>
+<a class="more launcher">Mais escolhas…</a>
+<a class="fewer launcher">Menos opções</a>
+</p>
+</li>
+<li class="leaf" id="list_responsive_filters:separator" js-navtype="dynamiclist">
+<p class="wrap button"><b class="icon"></b></p>
+</li>
+</ul>
+<ul id="list_domain_bundles" js-navtype="dynamiclist" tabindex="0">
+<li class="leaf" id="list_domain_bundles:leaf" js-navtype="dynamiclist">
+<div class="wrap button"><b class="icon" title=""></b>
+<p class="column one"><a class="emphasis"></a></p>
+<p class="column two"><a class="launcher"></a> | <a class="launcher"></a></p>
+</div>
+</li>
+</ul>
+<ul class="list tabular type_messages fourColumn" id="list_fourColumn_type_message" js-navtype="dynamiclist" tabindex="0">
+<li class="leaf" id="list_fourColumn_type_message:header" js-navtype="dynamiclist">
+<div class="wrap header type_messages">
+<div class="column one">
+<p class="subject" title="Assunto da mensagem">Assunto</p>
+</div>
+<div class="column two">
+<p class="date" title="Data de evento">Data</p>
+</div>
+<div class="column three">
+<p class="type" title="Tipo de evento">Tipo</p>
+</div>
+<div class="column four">
+<p class="component" title="Componente afetado">Componente</p>
+</div>
+</div>
+</li>
+<li class="leaf" id="list_fourColumn_type_message:unread" js-navtype="dynamiclist">
+<div class="wrap button type_messages unread">
+<div class="column one">
+<p class="subject" title="Assunto da mensagem"><a></a></p>
+</div>
+<div class="column two">
+<p class="date" title=""></p>
+</div>
+<div class="column three">
+<p class="type" title="Tipo de evento"></p>
+</div>
+<div class="column four">
+<p class="component" title="Componente afetado"></p>
+</div>
+</div>
+</li>
+<li class="leaf" id="list_fourColumn_type_message:read" js-navtype="dynamiclist">
+<div class="wrap button type_messages">
+<div class="column one">
+<p class="subject" title="Assunto da mensagem"><a></a></p>
+</div>
+<div class="column two">
+<p class="date" title=""></p>
+</div>
+<div class="column three">
+<p class="type" title="Tipo de evento"></p>
+</div>
+<div class="column four">
+<p class="component" title="Componente afetado"></p>
+</div>
+</div>
+</li>
+</ul>
+<ul class="list fields" id="list_responsive_fields" js-navtype="dynamiclist" tabindex="0">
+<li class="leaf" id="list_responsive_fields:leaf" js-navtype="dynamiclist"><a class="wrap button" href="list.jsp#"><b class="icon"></b></a></li>
+</ul>
+<ul class="list type_attributes" id="list_type_attributes" js-stdnav="false" tabindex="-1">
+<li class="leaf" id="list_type_attributes:role" js-navtype="dynamiclist"><a class="wrap button launcher" href="list.jsp#"></a><span class="separator">,</span></li>
+<li class="leaf" id="list_type_attributes:role:last" js-navtype="dynamiclist"><a class="wrap button launcher" href="list.jsp#"></a></li>
+<li class="leaf" id="list_type_attributes:user" js-navtype="dynamiclist"><a class="wrap button launcher" href="list.jsp#"></a>, </li>
+<li class="leaf" id="list_type_attributes:user:last" js-navtype="dynamiclist"><a class="wrap button launcher" href="list.jsp#"></a></li>
+<li class="leaf" id="list_type_attributes:profileAttribute" js-navtype="dynamiclist">, </li>
+<li class="leaf" id="list_type_attributes:profileAttribute:last" js-navtype="dynamiclist"></li>
+</ul>
+<ul class="list tabular filters twoColumn" id="list_domain_chooser_filter" js-navtype="dynamiclist" tabindex="0">
+<li class="leaf" id="list_domain_chooser_filter:leaf" js-navtype="dynamiclist">
+<div class="wrap readonly">
+<div class="column one condition">
+<span class="fieldName"></span>
+<span class="operation"></span>
+<span class="value"></span>
+</div>
+<div class="column two">
+<span class="lock"></span>
+<span class="actions">
+<a class="launcher button change">page.preFilters.filter.change</a> |
+                        <a class="launcher button remove">page.preFilters.filter.remove</a>
+</span>
+</div>
+</div>
+</li>
+</ul>
+<ul class="list tabular fourColumn" id="list_domain_designer_joins" js-navtype="dynamiclist" tabindex="0">
+<li class="leaf" id="list_domain_designer_joins:leaf" js-navtype="dynamiclist">
+<div class="wrap"><b class="icon"></b>
+<p class="column one"></p>
+<p class="column two"></p>
+<p class="column three">
+<select>
+<option selected="selected" value="inner">select.options.joins.inner</option>
+<option value="leftOuter">select.options.joins.left</option>
+<option value="rightOuter">select.options.joins.right</option>
+<option value="fullOuter">select.options.joins.full</option>
+</select>
+</p>
+<p class="column four"><a class="launcher button">domain.designer.joins.remove</a></p>
+</div>
+</li>
+</ul>
+<ul class="list collapsible fields hideRoot column simple" id="list_fields_hideRoot_column_simple" js-navtype="dynamiclist" tabindex="0">
+<!--
+        Template of sort fild
+        States (possible class name changes) :
+            * ascending - asc sorting by this filed
+            * descending - desc sorting by this field
+    -->
+<li class="leaf ascending" id="list_fields_hideRoot_column_simple:leaf" js-navtype="dynamiclist">
+<div class="wrap button draggable"><b class="icon button"></b></div>
+</li>
+</ul>
+</div>
+<div id="treeTemplateHolder" style="display:none">
+<!-- FIXME: StdNav: implement dynamictree plugin and switch navtypes to that -->
+<ul class="list collapsible" id="list_responsive_collapsible" js-navtype="dynamiclist" tabindex="0">
+<li class="leaf" id="list_responsive_collapsible:leaf" js-navtype="dynamiclist">
+<p class="wrap button draggable"><b class="icon"></b></p>
+</li>
+<li class="node loading" id="list_responsive_collapsible:loading" js-navtype="dynamiclist">
+<p class="wrap button draggable"><b class="icon"></b></p>
+</li>
+</ul>
+<ul class="list collapsible folders" id="list_responsive_collapsible_folders" js-navtype="dynamiclist" tabindex="0">
+<li class="folders" id="list_responsive_collapsible_folders:folders" js-navtype="dynamiclist">
+<p class="wrap button draggable"><b class="icon"></b></p>
+</li>
+</ul>
+<ul class="list collapsible folders" id="list_responsive_collapsible_folders_adhocAvailableTrees" js-navtype="dynamiclist" tabindex="0">
+<li class="folders" id="list_responsive_collapsible_folders_adhocAvailableTrees:folders" js-navtype="dynamiclist">
+<p class="wrap button draggable">
+<b class="icon"></b>
+<b class="icon error hidden"></b>
+</p>
+</li>
+</ul>
+<ul class="list collapsible folders" id="list_responsive_collapsible_folders_specialContent" js-navtype="dynamiclist" tabindex="0">
+<li class="node specialContent" id="list_responsive_collapsible_folders_specialContent:folders" js-navtype="dynamiclist">
+<p class="wrap button"><b class="icon"></b></p>
+</li>
+<li class="leaf" id="list_responsive_collapsible_folders_specialContent:leaf" js-navtype="dynamiclist">
+<p class="wrap button draggable"><b class="icon"></b></p>
+</li>
+</ul>
+<ul class="list collapsible fields" id="list_responsive_collapsible_fields" js-navtype="dynamiclist" tabindex="0">
+<li class="fields" id="list_responsive_collapsible_fields:fields" js-navtype="dynamiclist">
+<p class="wrap button draggable"><span class="icon button"></span></p>
+</li>
+</ul>
+<ul class="list collapsible type_tables" id="list_responsive_collapsible_type_tables" js-navtype="dynamiclist" tabindex="0">
+<li class="type_tables" id="list_responsive_collapsible_type_tables:tables" js-navtype="dynamiclist">
+<p class="wrap button draggable"><span class="icon button"></span></p>
+</li>
+<li class="type_tables" id="list_responsive_collapsible_type_tables:fields" js-navtype="dynamiclist">
+<p class="wrap"><span class="icon noBubble"></span></p>
+</li>
+</ul>
+<ul class="list collapsible type_sets column simple" id="list_responsive_collapsible_type_sets" js-navtype="dynamiclist" tabindex="0">
+<li class="set" id="list_responsive_collapsible_type_sets:sets" js-navtype="dynamiclist">
+<p class="wrap button draggable"><span class="icon button"></span></p>
+</li>
+</ul>
+<ul class="list collapsible" id="list_responsive" js-navtype="dynamiclist" tabindex="0">
+<li id="list_responsive:twoColumn" js-navtype="dynamiclist">
+<div class="wrap button"><span class="icon button"></span><p class="column one"></p><p class="column two"></p></div>
+</li>
+</ul>
+<input id="list_responsive_collapsible:input" type="text" value=""/>
+</div>
+<div class="panel info tooltip hidden" id="jsTooltip">
+<!-- nonce-97DV-HNGC-FPUL-0XI4-YEO4-4TZS-1S2G-1PLW (jsp XSS nonce) -->
+<div class="content">
+<div class="body">
+<p class="message"></p>
+</div>
+</div>
+</div>
+<div class="panel info tooltip hidden" id="orgTooltip">
+<!-- nonce-97DV-HNGC-FPUL-0XI4-YEO4-4TZS-1S2G-1PLW (jsp XSS nonce) -->
+<div class="content">
+<div class="body">
+<p class="message label">Organização</p>
+<p class="message"></p>
+</div>
+</div>
+</div>
+<div class="panel info tooltip hidden" id="fullNameTooltip">
+<!-- nonce-97DV-HNGC-FPUL-0XI4-YEO4-4TZS-1S2G-1PLW (jsp XSS nonce) -->
+<div class="content">
+<div class="body">
+<p class="message label">Nome completo</p>
+<p class="message"></p>
+</div>
+</div>
+</div>
+<div class="panel info tooltip hidden" id="fullNameAndOrgTooltip">
+<!-- nonce-97DV-HNGC-FPUL-0XI4-YEO4-4TZS-1S2G-1PLW (jsp XSS nonce) -->
+<div class="content">
+<div class="body">
+<p class="message label">Nome completo</p>
+<p class="message"></p>
+<p class="message label">Organização</p>
+<p class="message"></p>
+</div>
+</div>
+</div>
+<div class="panel info tooltip hidden" id="resourceNameTooltip">
+<!-- nonce-97DV-HNGC-FPUL-0XI4-YEO4-4TZS-1S2G-1PLW (jsp XSS nonce) -->
+<div class="content">
+<div class="body">
+<p class="message label">Nome: </p>
+<p class="message"></p>
+<p class="message label">Caminho: </p>
+<p class="message"></p>
+</div>
+</div>
+</div>
+<div style="display:none;">
+<div class="column two" id="column_two">
+<h3 class="resourceName" id="column_two:resourceName" item="item"><a></a></h3>
+</div>
+</div>
+<!-- save as dialog -->
+<div class="panel dialog overlay saveAs sizeable moveable hidden centered_vert centered_horz" id="saveAs">
+<!-- nonce-97DV-HNGC-FPUL-0XI4-YEO4-4TZS-1S2G-1PLW (jsp XSS nonce) -->
+<div class="sizer diagonal"></div>
+<div class="content hasFooter">
+<div class="header mover">
+<div class="title">
+                Salvar como
+            </div>
+</div>
+<div class="body">
+<label accesskey="o" class="control input text" for="saveAsInputName" title="Este será o nome visível do recurso e pode ser alterado">
+<span class="wrap">Nome (necessário):</span>
+<input class="" id="saveAsInputName" type="text" value=""/>
+<span class="message warning"></span>
+</label>
+<label class="control textArea" for="saveAsInputDescription">
+<span class="wrap">Descrição:</span>
+<textarea id="saveAsInputDescription" type="text"> </textarea>
+<span class="message warning"></span>
+</label>
+<div class="control groupBox">
+<!-- nonce-97DV-HNGC-FPUL-0XI4-YEO4-4TZS-1S2G-1PLW (jsp XSS nonce) -->
+<div class="content">
+<div class="body">
+<ul class="responsive collapsible folders hideRoot" id="saveAsFoldersTree"></ul>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<button class="button action primary up" id="saveAsBtnSave">
+<span class="wrap">
+                Salvar
+                <span class="icon"></span>
+</span>
+</button>
+<button class="button action up" id="saveAsBtnCancel">
+<span class="wrap">
+                Cancelar
+                <span class="icon"></span>
+</span>
+</button>
+</div>
+</div>
+</div>
+<!-- dimmer - for modal dialogs -->
+<div class="dimmer hidden" id="pageDimmer"></div>
+<!-- loading cue -->
+<div class="jr-mDialog jr-mDialogModal jr dialog loading movable centered_horz centered_vert hidden" id="loading" style="position: absolute;">
+<div class="jr-mDialog-header jr mover">
+<h1 class="jr-mDialog-header-title jr">Carregando…</h1>
+</div>
+<div class="jr-mDialog-body jr-mDialog-bodyPadded jr">
+<div class="jr-mOverlay jr-mOverlayClear jr">
+<div class="jr-mSpinner jr-mSpinnerPlain jr"></div>
+</div>
+</div>
+<div class="jr-mDialog-footer jr">
+<button aria-label="Cancelar " class="jr-mButton jr-mButtonText jr-mButtonPrimary jr-uWidth-100pc jr" id="cancel">
+<span class="jr-mButton-label jr">Cancelar</span>
+</button>
+</div>
+</div>
+<!-- ajax alert popup dialog -->
+<div class="panel dialog overlay standardAlert moveable centered_horz centered_vert sizeable hidden" id="standardAlert">
+<!-- nonce-97DV-HNGC-FPUL-0XI4-YEO4-4TZS-1S2G-1PLW (jsp XSS nonce) -->
+<div class="sizer diagonal"></div>
+<div class="content hasFooter">
+<div class="header mover">
+<div class="title">
+                Detalhes de erro
+            </div>
+</div>
+<div class="body">
+<div id="errorPopupContents"></div>
+</div>
+<div class="footer">
+<button class="button action primary up" id=""><span class="wrap">Fechar</span><span class="icon"></span></button>
+</div>
+</div>
+</div>
+<iframe id="ajax-download-iframe" style="visibility:hidden"></iframe>
+<iframe id="ajax-upload-iframe" src="about:blank" style="visibility:hidden"></iframe>
+<div class="panel dialog overlay heartbeatOptin moveable centered_horz centered_vert hidden" id="heartbeatOptin">
+<!-- nonce-97DV-HNGC-FPUL-0XI4-YEO4-4TZS-1S2G-1PLW (jsp XSS nonce) -->
+<div class="content hasFooter">
+<div class="header mover">
+<div class="title">
+                Coleção de dados Heartbeat
+            </div>
+</div>
+<div class="body">
+<p class="message">Ajude-nos a criar melhores produtos aceitando os termos do Heartbeat.</p><p class="message">Ao permitir que o Heartbeat colete dados, você confirma o consentimento, onde pertinente, de todos os usuários individuais em sua organização.</p><p class="message">O Heartbeat permite que a TIBCO Jaspersoft colete informações anônimas do sistema e pode ser desativado a qualquer momento. Os dados do Heartbeat são usados com as finalidades estabelecidas na página web do TIBCO JasperReports Server Heartbeat em <a href="http://www.jaspersoft.com/heartbeat" target="_blank">www.jaspersoft.com/heartbeat</a>.</p><p class="message"> Nossa política de privacidade se encontra em <a href="http://www.jaspersoft.com/privacy" target="_blank">www.jaspersoft.com/privacy</a>.</p>
+<div class="control checkBox">
+<label class="wrap" for="heartbeatCheck" title="Aceitar a coleta dos dados do heartbeat">
+                Aceitar os termos do Hearbeat do JasperReports Server
+            </label>
+<input checked="checked" class="" id="heartbeatCheck" type="checkbox"/>
+</div>
+</div>
+<div class="footer">
+<button class="button action primary up" id=""><span class="wrap">OK</span><span class="icon"></span></button>
+</div>
+</div>
+</div>
+<div class="panel dialog aboutBox overlay moveable centered_horz centered_vert hidden centered_vert centered_horz" id="aboutBox">
+<!-- nonce-97DV-HNGC-FPUL-0XI4-YEO4-4TZS-1S2G-1PLW (jsp XSS nonce) -->
+<div class="content hasFooter">
+<div class="header mover">
+<div class="title">
+                Sobre o TIBCO JasperReports Server
+            </div>
+</div>
+<div class="body">
+<div class="control groupBox fillParent">
+<!-- nonce-97DV-HNGC-FPUL-0XI4-YEO4-4TZS-1S2G-1PLW (jsp XSS nonce) -->
+<div class="content">
+<div class="body">
+<p class="message">Versão do produto: <span class="emphasis">7.8.0</span></p>
+<p class="message">Construir: <span class="emphasis">20200807_1412</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<button class="button action primary up"><span class="wrap">Fechar</span><span class="icon"></span></button>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+    // nonce-97DV-HNGC-FPUL-0XI4-YEO4-4TZS-1S2G-1PLW (jsp XSS nonce)
+
+
+    //common URL context
+    var urlContext = "/RelatoriosPRE";
+
+    
+    var defaultSearchText = "";
+    var serverIsNotResponding = "O servidor está lento ou não está respondendo. Confirme que deseja continuar.";
+
+    var commonReportGeneratorsMetadata = [];
+</script>
+<script id="navigationActionModel" type="text/json">
+    {"main_home_mutton":[],"main_library_mutton":[],"main_view_mutton":[{"type": "selectAction","text": "Visualização","children": [{"type": "optionAction","text": "Resultados da busca","action": "primaryNavModule.navigationOption","actionArgs": ["search"]},{"type": "optionAction","text": "Repositório","action": "primaryNavModule.navigationOption","actionArgs": ["browse"]},{"type": "optionAction","text": "Agendas","action": "primaryNavModule.navigationOption","actionArgs": ["jobs"]},{"type": "optionAction","text": "Mensagens","action": "primaryNavModule.navigationOption","actionArgs": ["event"]}]}]}
+</script>
+<div class="hidden">
+<p class="action"> </p>
+<p class="action over"> </p>
+<p class="action pressed"> </p>
+<p class="action primary"> </p>
+<p class="action primary over"> </p>
+<p class="action primary pressed"> </p>
+</div>
+</div>
+</body>
+</html>

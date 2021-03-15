@@ -1,14 +1,20 @@
-from random import sample
+import requests
 
+url = "http://cotacao.b3.com.br/mds/api/v1/DerivativeQuotation/DOL"
+resp = requests.get(url)
 
-def mega_sena(q):
-    for i in range(1, q + 1):
-        yield sorted(sample(range(1, 61), 6))
+""" bs = BeautifulSoup(resp.content) """
 
+""" trs = bs.body.div.div.div.form.div.div.table.tbody.tr.find('td', id='TB03').content """
 
-quant = int(input('Quantidade de palpites: '))
+print(resp.content)
 
-for j in mega_sena(quant):
-    for k in j:
-        print(f'{k:02}', end=' ')
-    print()
+""" for tr in trs:
+    if trs.index(tr) == 2:
+        tds = tr.findAll("td")
+
+        for td in tds:
+            if tds.index(td) == 3:
+                valor = td.get_text()
+
+print(valor) """
